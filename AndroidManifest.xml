@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:compileSdkVersion="32"
+    android:compileSdkVersionCodename="12"
+    package="com.simsekberna.etech_app_v1"
+    platformBuildVersionCode="32"
+    platformBuildVersionName="12">
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="32" />
+
+    <queries>
+
+        <intent>
+
+            <action
+                android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+
+        <intent>
+
+            <action
+                android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+        </intent>
+    </queries>
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:theme="@ref/0x7f140201"
+        android:label="@ref/0x7f13001d"
+        android:icon="@ref/0x7f0800ab"
+        android:debuggable="true"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:fullBackupContent="@ref/0x7f160000"
+        android:roundIcon="@ref/0x7f0800ab"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@ref/0x7f160001">
+
+        <activity
+            android:name="com.simsekberna.etech_app_v1.Activities.CategoryActivity"
+            android:exported="false">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="@string/0x1f" />
+        </activity>
+
+        <activity
+            android:name="com.simsekberna.etech_app_v1.Activities.ProductActivity"
+            android:exported="false">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="@string/0x1f" />
+        </activity>
+
+        <activity
+            android:name="com.simsekberna.etech_app_v1.Activities.LoginActivity"
+            android:exported="false">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="@string/0x1f" />
+        </activity>
+
+        <activity
+            android:name="com.simsekberna.etech_app_v1.Activities.RegisterActivity"
+            android:exported="false">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="@string/0x1f" />
+        </activity>
+
+        <activity
+            android:name="com.simsekberna.etech_app_v1.Activities.MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="@string/0x1f" />
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@ref/0x7f030003" />
+
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="@string/0x1f" />
+
+        <activity
+            android:theme="@ref/0x7f140249"
+            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
+            android:screenOrientation="-1" />
+
+        <activity
+            android:theme="@ref/0x7f1401f9"
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="1" />
+
+        <provider
+            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
+            android:exported="false"
+            android:authorities="com.simsekberna.etech_app_v1.imagepicker.provider"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@ref/0x7f160002" />
+        </provider>
+
+        <activity
+            android:theme="@ref/0x01030010"
+            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:launchMode="2">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="genericidp"
+                    android:host="firebase.auth"
+                    android:path="/" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@ref/0x01030010"
+            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:launchMode="2">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="recaptcha"
+                    android:host="firebase.auth"
+                    android:path="/" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:exported="false"
+            android:authorities="com.simsekberna.etech_app_v1.com.squareup.picasso" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.simsekberna.etech_app_v1.firebaseinitprovider"
+            android:initOrder="100"
+            android:directBootAware="true" />
+
+        <activity
+            android:theme="@ref/0x01030010"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@ref/0x7f0b0009" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.simsekberna.etech_app_v1.androidx-startup">
+
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+    </application>
+</manifest>

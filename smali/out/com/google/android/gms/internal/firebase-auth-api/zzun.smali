@@ -1,0 +1,43 @@
+.class public final synthetic Lcom/google/android/gms/internal/firebase-auth-api/zzun;
+.super Ljava/lang/Object;
+.source "com.google.firebase:firebase-auth@@21.0.2"
+
+
+# direct methods
+.method public static synthetic zza(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+    .registers 7
+
+    const/4 v0, 0x1
+
+    :try_start_1
+    new-array v1, v0, [Ljava/lang/Class;
+
+    const-class v2, Ljava/lang/Throwable;
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    const-class v2, Ljava/lang/Throwable;
+
+    const-string v4, "addSuppressed"
+
+    invoke-virtual {v2, v4, v1}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v1
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    aput-object p1, v0, v3
+
+    invoke-virtual {v1, p0, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_17
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_17} :catch_18
+
+    return-void
+
+    :catch_18
+    move-exception p0
+
+    return-void
+.end method
